@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled, { css } from "styled-components";
+
+import ThePerfectAvatar from "./ThePerfectAvatar";
+import avatar from "./avatar.png";
+
+const StyledAvatarWrapper = styled.div`
+  margin-bottom: 3rem;
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StyledAvatarWrapper>
+        <ThePerfectAvatar name="MV" />
+      </StyledAvatarWrapper>
+      <StyledAvatarWrapper>
+        <ThePerfectAvatar src={avatar} name="MV" />
+      </StyledAvatarWrapper>
+      <StyledAvatarWrapper>
+        <ThePerfectAvatar src={avatar} name="MV" isActive />
+      </StyledAvatarWrapper>
+      <StyledAvatarWrapper>
+        <ThePerfectAvatar src={avatar} name="MV" isActive hasBadge />
+      </StyledAvatarWrapper>
     </div>
   );
 }
